@@ -5,7 +5,7 @@ var nave = -20;
 var navey = 0
 
 var dir = 1;
-var col = 10;
+var tam = 10;
 
 var solx = 0;
 var soly = 0;
@@ -20,8 +20,9 @@ var planex = 0
 var planey = 0
 
 function setup() {
-  createCanvas(400, 250);
+  createCanvas(windowWidth, windowHeight);
 
+  //frameRate(4);
 }
 
 function draw() {
@@ -31,7 +32,7 @@ function draw() {
   //crear movimiento hacia la esquina inferior izquierda del planeta azul
   fill(0, 255, 228);
   noStroke()
-  ellipse(planex + 200, -120 - planey, 100)
+  ellipse((planex + 200) * width / 400, (-120 - planey) * height / 250, 100 * width / 400, 100 * height / 250)
   //poner menor velocidad (-) en el eje y para que este se mueva para abajo
   planex = planex + 0.6
   planey = planey - 1
@@ -39,57 +40,63 @@ function draw() {
   //sol movimiento
   fill(255, 212, 38);
   noStroke()
-  ellipse(solx, 200 - soly, 300)
+  ellipse(solx * width / 400, (200 - soly) * height / 250, 300 * width / 400, 300 * height / 250)
   //definir velocidad y dirección
   solx = solx + 0.5
   soly = soly - 0.4
 
   //rayo laser nave estatica
   stroke(246, 255, 110);
-  line(rayox + 166, rayo + 118, rayox + 168, rayo + 93)
-  line(180, rayo + 118, 182, rayo + 93)
+  line(166 * width / 400, (rayo + 118) * height / 250, 168 * width / 400, (rayo + 93) * height / 250);
+  line(180 * width / 400, (rayo + 118) * height / 250, 182 * width / 400, (rayo + 93) * height / 250);
 
   //crear movimiento del laser solo sobre el eje y.
   rayo = rayo - 4
   //repetición del laser ?
-  //if (rayo == 2) {
-  //rayo = 0;
-  //}
+  if (rayo < -100) {
+    rayo = 70;
+  }
 
   //nave estatica
   noStroke();
   fill(187);
-  quad(162, 117, 169, 118, 169, 145, 150, 145);
-  quad(177, 118, 184, 118, 193, 150, 177, 136);
-  ellipse(170, 160, 50);
+  quad(162 * width / 400, 117 * height / 250, 169 * width / 400, 118 * height / 250, 169 * width / 400, 145 * height / 250, 150 * width / 400, 145 * height / 250);
+  quad(177 * width / 400, 118 * height / 250, 184 * width / 400, 118 * height / 250, 193 * width / 400, 150 * height / 250, 177 * width / 400, 136 * height / 250);
+  ellipse(170 * width / 400, 160 * height / 250, 50 * width / 400, 50 * height / 250);
   fill(255, 0, 0)
-  ellipse(173, 140, 2)
-  ellipse(183, 148, 2)
-  ellipse(160, 147, 2);
+  ellipse(173 * width / 400, 140 * height / 250, 2 * width / 400, 2 * height / 250);
+  ellipse(183 * width / 400, 148 * height / 250, 2 * width / 400, 2 * height / 250);
+  ellipse(160 * width / 400, 147 * height / 250, 2 * width / 400, 2 * height / 250);
 
   //nave movimiento hacia arriba y a la izquierda.
   fill(172, 72, 72);
   noStroke();
-  quad(249 + navey, 96 - nave, 300 + navey, 156 - nave, 279 + navey, 175 - nave, 249 + navey, 171 - nave);
+  quad((249 + navey) * width / 400, (96 - nave) * height / 250, (300 + navey) * width / 400, (156 - nave) * height / 250, (279 + navey) * width / 400, (175 - nave) * height / 250, (249 + navey) * width / 400, (171 - nave) * height / 250);
   //velocidad y dirección de la nave:
   nave = nave + 0.4
   navey = navey - 0.3
 
+  //explosión de nave
+  if (frameCount >= 300) {
+    fill(255)
+    ellipse(167 * width / 400, 50 * height / 250, tam * width / 400, tam * height / 250);
+    tam = tam + 5;
+  }
 
   //fondo de estrellas: variación en lugar y tamaños
   fill(255)
-  ellipse(posx, posy, 5);
-  ellipse(posx + 200, posy - 200, 3)
-  ellipse(posx + 100, posy - 300, 3)
-  ellipse(posx + 10, posy + 50, 5)
-  ellipse(posx + 10, posy + 80, 7)
-  ellipse(posx - 50, posy + 150, 7)
-  ellipse(posx + 250, posy + 150, 3)
-  ellipse(posx + 300, posy + 10, 5)
-  ellipse(posx + 130, posy + 20, 3)
-  ellipse(posx + 10, posy + 20, 2)
-  ellipse(posx + 30, posy + 170, 2)
-  ellipse(posx + 200, posy - 13, 3)
+  ellipse(posx * width / 400, posy * height / 250, 5);
+  ellipse(posx + 200 * width / 400, (posy - 200) * height / 250, 3 * width / 400, 3 * height / 250);
+  ellipse(posx + 100 * width / 400, (posy - 300) * height / 250, 3 * width / 400, 3 * height / 250);
+  ellipse(posx + 10 * width / 400, (posy + 50) * height / 250, 5 * width / 400, 5 * height / 250);
+  ellipse(posx + 10 * width / 400, (posy + 80) * height / 250, 7 * width / 400, 7 * height / 250);
+  ellipse(posx - 50 * width / 400, (posy + 150) * height / 250, 7 * width / 400, 7 * height / 250);
+  ellipse(posx + 250 * width / 400, (posy + 150) * height / 250, 3 * width / 400, 3 * height / 250);
+  ellipse(posx + 300 * width / 400, (posy + 10) * height / 250, 5 * width / 400, 5 * height / 250);
+  ellipse(posx + 130 * width / 400, (posy + 20) * height / 250, 3 * width / 400, 3 * height / 250);
+  ellipse(posx + 10 * width / 400, (posy + 20) * height / 250, 2 * width / 400, 2 * height / 250);
+  ellipse(posx + 30 * width / 400, (posy + 170) * height / 250, 2 * width / 400, 2 * height / 250);
+  ellipse(posx + 200 * width / 400, (posy - 13) * height / 250, 3 * width / 400, 3 * height / 250);
   //velocidad y dirección de las estrellas:
   posx = posx + velx
   posy = posy + vely
@@ -99,6 +106,13 @@ function draw() {
   }
   if (posy > 400) {
     posy = -300;
+  }
+
+  if (frameCount <= 410) {
+    if (frameCount % 2 == 0) {
+      //saveCanvas("MiFlipbook"+frameCount,'jpg');
+
+    }
   }
 
 }
