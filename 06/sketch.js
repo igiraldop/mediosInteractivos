@@ -8,10 +8,10 @@ function draw() {
 
 
   hora = hour();
-  //hora=17
+  //hora=15
 
 
-  if (hora <= 7 && hora >= 5) {
+  if (hora < 7 & hora >= 5) {
     //CARA CON SUEÑO
     rect(85, 241, 247, 123);
 
@@ -133,8 +133,9 @@ function draw() {
     line(181, 253, 191, 257);
     line(223, 241, 228, 253);
     line(228, 253, 218, 257);
-  } else if (hora <= 10 && hora >= 7) {
-    //CARA NORMAL
+  } 
+  else if (hora < 10 & hora >= 7) {
+//CARA NORMAL
     rect(85, 241, 247, 123);
 
     fill(204, 142, 110);
@@ -245,8 +246,8 @@ function draw() {
     fill(35, 19, 11);
     quad(179, 134, 180, 146, 102, 140, 128, 133)
     quad(231, 135, 230, 147, 305, 143, 281, 135)
-
-  } else if (hora <= 12 && hora >= 10) {
+  } 
+  else if (hora < 12 & hora >= 10) {
     //CARA CONFUNDIDA
     rect(85, 241, 247, 123);
 
@@ -375,7 +376,9 @@ function draw() {
     line(181, 253, 191, 257);
     line(223, 241, 228, 253);
     line(228, 253, 218, 257);
-  } else if (hora <= 14 && hora >= 12) {
+    
+  } 
+  else if (hora < 14 && hora >= 12) {
     //CARA CONTENTA
 
     rect(85, 241, 247, 123);
@@ -512,7 +515,9 @@ function draw() {
     fill(35, 19, 11);
     quad(179, 134, 180, 146, 102, 140, 128, 133);
     quad(231, 135, 230, 147, 305, 143, 281, 135);
-  } else if (hora <= 17 && hora >= 14) {
+
+  } 
+  else if (hora < 17 && hora >= 14) {
     //CARA DURMIENDO
     rect(85, 241, 247, 123);
 
@@ -615,7 +620,9 @@ function draw() {
     line(181, 253, 191, 257);
     line(223, 241, 228, 253);
     line(228, 253, 218, 257);
-  } else if (hora <= 19 && hora >= 17) {
+
+  } 
+  else if (hora < 19 && hora >= 17) {
     //CARA BRAVA
     rect(85, 241, 247, 123);
     noStroke();
@@ -742,7 +749,8 @@ function draw() {
     line(181, 253, 191, 257);
     line(223, 241, 228, 253);
     line(228, 253, 218, 257);
-  } else if (hora <= 20 && hora >= 19) {
+
+  } else if (hora < 20 && hora >= 19) {
     //CARA CANSADA
     rect(85, 241, 247, 123);
 
@@ -864,7 +872,8 @@ function draw() {
     line(181, 253, 191, 257);
     line(223, 241, 228, 253);
     line(228, 253, 218, 257);
-  } else if (hora <= 22 && hora >= 20) {
+
+  } else if (hora < 22 && hora >= 20) {
     //CARA RELAJADA
 
     rect(85, 241, 247, 123);
@@ -964,7 +973,8 @@ function draw() {
     fill(35, 19, 11);
     quad(179, 134, 180, 146, 102, 140, 128, 133)
     quad(231, 135, 230, 147, 305, 143, 281, 135)
-  } else if (hora <= 0 && hora >= 22) {
+
+  } else if (hora < 0 && hora >= 22) {
     //CARA CANSADA
     rect(85, 241, 247, 123);
 
