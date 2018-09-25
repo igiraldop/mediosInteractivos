@@ -52,19 +52,19 @@ function draw() {
   if (cancion1.currentTime() > (dur / 6) - 42 && cancion1.currentTime() < (dur / 6) - 20) {
     fill(255)
     textFont('fuente1');
-    textSize(15);
+    textSize(13);
     text("3,", 220, 36);
   }
   if (cancion1.currentTime() > (dur / 6) - 41 && cancion1.currentTime() < (dur / 6) - 20) {
     fill(255)
     textFont('fuente1');
-    textSize(15);
+    textSize(13);
     text("2,", 232, 36);
   }
   if (cancion1.currentTime() > (dur / 6) - 40 && cancion1.currentTime() < (dur / 6) - 20) {
     fill(255)
     textFont('fuente1');
-    textSize(15);
+    textSize(13);
     text("1...", 244, 36);
   }
 
@@ -78,19 +78,19 @@ function draw() {
   if (cancion1.currentTime() > (dur / 6) - 17 && cancion1.currentTime() < (dur / 6) + 30) {
     fill(255)
     textFont('fuente1');
-    textSize(15);
+    textSize(13);
     text("3,", 190, 36);
   }
   if (cancion1.currentTime() > (dur / 6) - 16 && cancion1.currentTime() < (dur / 6) + 30) {
     fill(255)
     textFont('fuente1');
-    textSize(15);
+    textSize(13);
     text("2,", 202, 36);
   }
   if (cancion1.currentTime() > (dur / 6) - 15 && cancion1.currentTime() < (dur / 6) + 30) {
     fill(255)
     textFont('fuente1');
-    textSize(15);
+    textSize(13);
     text("1...", 214, 36);
   }
 
@@ -104,19 +104,19 @@ function draw() {
   if (cancion1.currentTime() > (dur / 6) + 29 && cancion1.currentTime() < (dur / 2) + 10) {
     fill(255)
     textFont('fuente1');
-    textSize(15);
+    textSize(13);
     text("3,", 360, 36);
   }
   if (cancion1.currentTime() > (dur / 6) + 30 && cancion1.currentTime() < (dur / 2) + 10) {
     fill(255)
     textFont('fuente1');
-    textSize(15);
+    textSize(13);
     text("2,", 372, 36);
   }
   if (cancion1.currentTime() > (dur / 6) + 31 && cancion1.currentTime() < (dur / 2) + 10) {
     fill(255)
     textFont('fuente1');
-    textSize(15);
+    textSize(13);
     text("1...", 384, 36);
   }
 
