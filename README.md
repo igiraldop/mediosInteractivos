@@ -7,3 +7,4 @@ indice de ejercicios de la clase de Isabella Giraldo P.
 5. [Movimiento sin ajuste de pantalla](https://igiraldop.github.io/mediosInteractivos/05)
 6. [Reloj](https://igiraldop.github.io/mediosInteractivos/06)
 7. [Sonido](https://igiraldop.github.io/mediosInteractivos/07)
+8. [Arreglos ecosistema](https://igiraldop.github.io/mediosInteractivos/08)
